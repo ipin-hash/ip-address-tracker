@@ -13,6 +13,15 @@ function maps(data) {
 }
 
 
+function result(data) {
+  document.querySelector('.address').innerHTML = data.ip; 
+  document.querySelector(".location").innerHTML = `${data.location.city}, ${data.location.country}`;
+  document.querySelector(".timezone").innerHTML = data.location.timezone;
+  document.querySelector('.isp').innerHTML = data.isp; 
+}
+
+
+
 btn.addEventListener("click", function(event) {
   event.preventDefault()
 
@@ -23,11 +32,12 @@ btn.addEventListener("click", function(event) {
     .then(responese => responese.json())
     .then(function(data) {
       if(input.value === '') {
-        console.log('error')
-      } 
-        maps(data)
-        result(data)
+        return null
+      } else {
+        maps(data);
+        result(data);
         input.value =  '';
+      }
     })
     .catch(err => err);
   }
@@ -36,14 +46,6 @@ btn.addEventListener("click", function(event) {
 
 
     
-
-function result(data) {
-  document.querySelector('.address').innerHTML = data.ip; 
-  document.querySelector(".location").innerHTML = `${data.location.city}, ${data.location.country}`;
-  document.querySelector(".timezone").innerHTML = data.location.timezone;
-  document.querySelector('.isp').innerHTML = data.isp; 
-
-}
 
 
 
