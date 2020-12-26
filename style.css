@@ -1,0 +1,84 @@
+*,
+*:after,
+*:before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --clr-dark: hsl(0, 0%, 17%);
+  --clr-gray: hsl(0, 0%, 59%);
+}
+
+header {
+  background-image: url(./images/pattern-bg.png);
+  height: 200px;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+h1.title-header {
+  font-family: "rubik", sans-serif;
+  font-size: 24px;
+  text-align: center;
+  color: #ffffff;
+  padding: 20px 0;
+  font-weight: 500;
+}
+form {  
+  display: flex;
+  justify-content: center;
+}
+
+header input.input {
+  outline-style: none;
+  height: 45px;
+  width: 30%;
+  border-radius: 15px;
+  border: none;
+  font-family: 'Rubik';
+  font-weight: 400;
+  font-size: 14px;
+  padding-left: 20px;
+}
+
+.btn {
+  background-image: url(./images/icon-arrow.svg);
+  width: 50px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: black;
+  border: none;
+  outline-style: none;
+  cursor: pointer;
+  margin-left: -20px;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+
+main {
+  position: relative;
+}
+
+.result {
+  display: grid;
+  grid-template-columns: repeat(auto-fit , minmax(200px, 1fr));
+  width: 70%;
+  margin: 0 auto;
+  background-color: thistle;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -30px;
+  padding: 35px 20px;
+  border-radius: 10px;
+  z-index: 2;
+}
+
+#map {
+  height: 500px;
+  z-index: -1;
+  background-repeat: no-repeat;
+}
