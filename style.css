@@ -103,7 +103,7 @@ main {
     font-size: 26px;   
   }
   #map {
-    height: 150vh;
+    height: 100vh;
   }
   header input.input{
     height: 40px;
