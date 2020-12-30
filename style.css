@@ -13,7 +13,7 @@
 
 header {
   background-image: url(./images/pattern-bg.png);
-  height: 200px;
+  height: 250px;
   width: 100%;
   background-repeat: no-repeat;
   background-size: cover;
@@ -21,10 +21,10 @@ header {
 
 h1.title-header {
   font-family: "rubik", sans-serif;
-  font-size: 24px;
+  font-size: 28px;
   text-align: center;
   color: #ffffff;
-  padding: 20px 0;
+  padding: 30px 0;
   font-weight: 500;
 }
 form {  
@@ -60,6 +60,7 @@ header input.input {
 
 main {
   position: relative;
+  z-index: 1;
 }
 
 .result {
@@ -70,10 +71,9 @@ main {
   position: absolute;
   left: 0;
   right: 0;
-  top: -30px;
+  top: -75px;
   padding: 35px 20px;
   border-radius: 10px;
-  z-index: 2;
   background-color: white;
 }
 
@@ -92,7 +92,26 @@ main {
   margin-top: 5px;
 }
 #map {
-  height: 500px;
+  height: 100vh;
+  /* width: 100vh; */
   z-index: -1;
   background-color: var(--clr-gray);
+}
+
+@media (max-width: 375px) {
+  h1.title-header {
+    font-size: 26px;   
+  }
+  header input.input{
+    height: 40px;
+    width: 85%;
+    font-size: 14px;
+  }
+  .result {
+    width: 95%;
+    text-align: center;
+  }
+  .wrapper {
+    margin: 15px 0;
+  }
 }
