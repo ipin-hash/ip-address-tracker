@@ -102,16 +102,24 @@ main {
   h1.title-header {
     font-size: 26px;   
   }
+  #map {
+    height: 150vh;
+  }
   header input.input{
     height: 40px;
-    width: 85%;
+    width: 80%;
     font-size: 14px;
   }
+
   .result {
-    width: 95%;
+    width: 89%;
+    padding: 8px;
     text-align: center;
   }
   .wrapper {
     margin: 15px 0;
+  }
+  .resolve {
+    font-size: 20px;
   }
 }
